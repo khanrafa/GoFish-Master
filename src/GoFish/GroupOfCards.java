@@ -26,6 +26,7 @@ public class GroupOfCards
         size = givenSize;
     }
     
+    
     /**
      * A method that will get the group of cards as an ArrayList
      * @return the group of cards.
