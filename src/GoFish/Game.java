@@ -3,7 +3,7 @@
  * Students can modify and extend to implement their game.
  * Add your name as a modifier and the date!
  */
-package ca.sheridancollege.project;
+package GoFish;
 
 import java.util.ArrayList;
 
@@ -14,8 +14,7 @@ import java.util.ArrayList;
  */
 public abstract class Game 
 {
-    private final String gameName;//the title of the game
-    private ArrayList <Player> players;// the players of the game
+    private final String gameName;// the players of the game
     
     public Game(String givenName)
     {
@@ -29,22 +28,6 @@ public abstract class Game
     public String getGameName() 
     {
         return gameName;
-    }
-    
-     /**
-     * @return the players of this game
-     */
-    public ArrayList <Player> getPlayers() 
-    {
-        return players;
-    }
-
-    /**
-     * @param players the players of this game
-     */
-    public void setPlayers(ArrayList <Player> players) 
-    {
-        this.players = players;
     }
     
     /**
