@@ -1,48 +1,80 @@
-/**
- * SYST 17796 Project Winter 2019 Base code.
- * Students can modify and extend to implement their game.
- * Add your name as a modifier and the date!
- */
-package ca.sheridancollege.project;
+package Group12_CardGame;
 
 /**
  * A class that models each Player in the game. Players have an identifier, which should be unique.
- * @author dancye, 2018
+ *
+ * @author dancye
+ * @author Paul Bonenfant Jan 2020
+ * @author Alexey
+ * @author Zhe X
+ * @Author Rafae K
  */
-public abstract class Player 
-{
-    private String playerID; //the unique ID for this player
-    
+public abstract class Player {
+
+    private String name; //the unique name for this player
+    private GroupOfCards hand;
+
     /**
      * A constructor that allows you to set the player's unique ID
+     *
      * @param name the unique ID to assign to this player.
      */
-    public Player(String name)
-    {
-        playerID= name;
-    }
-    
-    /**
-     * @return the playerID
-     */
-    public String getPlayerID() 
-    {
-        return playerID;
+    public Player(String name) {
+        this.name = name;
     }
 
     /**
-     * Ensure that the playerID is unique
-     * @param givenID the playerID to set
+     * @return the player name
      */
-    public void setPlayerID(String givenID) 
-    {
-        playerID = givenID;
+    public String getName() {
+        return name;
     }
-    
+
     /**
-     * The method to be instantiated when you subclass the Player class
-     * with your specific type of Player and filled in with logic to play your game.
+     * Draw a card from the deck
+     * @param deck GroupOfCards deck from GoFishGame
      */
-    public abstract void play();
-    
+    public void drawCard(GroupOfCards deck) {
+        //Take card from GoFishGame Deck
+        //hand.add(deck.index(random from 1 - remaining cards));
+    }
+
+    /**
+     * Ask another player for a card
+     * @param playerToAsk Which player you want to ask for a card
+     * @param cardToLookFor What card you are asking for
+     */
+    public void askForCard(Player playerToAsk, StandardCard cardToLookFor) {
+        //Only can ask for hard player has a suit off
+        //check playerToAsk hand for cardToLookFor
+        //takeCard();
+    }
+
+    /**
+     * Take card from player
+     * @param player
+     * @param cardToRemove
+     */
+    public void takeCard(Player player, StandardCard cardToRemove) {
+        //if hand contains card
+        //hand.remove(card.equals(cardToRemove))
+    }
+
+    /**
+     * Display hand
+     */
+    public void displayHand() {
+        //While i=0; i < hand.getCards().size; i ++
+        //hand.getCards().indexOf(i)
+    }
+
+    /**
+     * End turn
+     * @return true
+     */
+    public boolean endTurn() {
+        return true;
+    }
+
+
 }
